@@ -7,11 +7,12 @@ import { Rating } from '@mui/material';
 
 const Single = () => {
 
-  const [data, setProduct] = useState(0);
+  const [product, setProduct] = useState(null);
+  const productId = 7
 
   //Single product fetching call
   useEffect(() => {
-    const fetchData = async (productId) => {
+    const fetchData = async () => {
       try {
         const response = await axios.get(`https://fakestoreapi.com/products/${productId}`);
         setProduct(response.data);
@@ -20,29 +21,33 @@ const Single = () => {
       }
     };
 
-    fetchData(7);
-  }, []);
+    fetchData();
+  }, [productId]);
 
 
   return (
     // single product section
     <main className="l-main">
       <section className="home" id="home" >
-        <div className="home__container bd-container bd-grid" key={data.id}>
+        {product ? (
+          <div className="home__container bd-container bd-grid" key={product.id}>
 
           <div className="home__img">
-            <img src={data.image} alt="product_image" />
+            <img src={product.image} alt="product_image" />
           </div>
 
           <div className="home__data">
-            <h1 className="home__title">{data.title}</h1>
-            <p style={{ fontSize: '24px', fontWeight: '600' }}>${data.price}</p>
-            <br />
-            <p className="home__description">{data.description}</p>
+            <h1 className="home__title">{product.title}</h1>
+            <p style={{ fontSize: '24px', fontWeight: '600', color:'#5B5757' }}>${product.price}</p>
+      
+            <span><Rating name="half-rating-read" defaultValue={product.rating.rate} precision={0.1} readOnly /></span>
+            <p className="home__description">{product.description}</p>
 
             <a href="#" className="button">Add to cart</a>
           </div>
         </div>
+        ) : 'loading...'}
+        
       </section>
     </main>
 

@@ -2,7 +2,7 @@ import './App.css';
 import Preloader from './Pages/Preloader';
 import Products from './Pages/Products';
 import Single from './Pages/Single';
-
+import Footer from './Pages/Footer';
 
 import { useState } from 'react';
 
@@ -14,13 +14,12 @@ function App() {
   }, 3000);
   return (
     <>
-
       {
         loading ? <Preloader /> : (
           <div>
             <Single />
             <Products />
-            <Footer />
+            <Footer/>
           </div>
         )
       }

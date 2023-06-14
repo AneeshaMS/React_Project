@@ -1,4 +1,4 @@
-/*========== CLASS CSS ==========*/
+
 .section {
   padding: 4rem 0 2rem;
 }
@@ -11,7 +11,6 @@
   margin-bottom: 1.5rem
 }
 
-/*========== LAYOUT ==========*/
 .l-main {
   overflow: hidden;
   background: linear-gradient(#fffefe, #fefef1);
@@ -39,9 +38,6 @@
 }
 
 
-
-
-/*========== HOME ==========*/
 .home__container {
   row-gap: 1.5rem;
   margin-bottom: 3em;
@@ -54,7 +50,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* overflow: hidden; */
 
 }
 
@@ -79,9 +74,9 @@
 
 .home__description {
   margin-bottom: 1.5rem;
+  color: #8F8A8A;
 }
 
-/*========== BUTTONS ==========*/
 .button {
   display: inline-block;
   background: #2a2a72;
@@ -102,7 +97,6 @@
 
 /*========== MEDIA QUERIES ==========*/
 
-/* For full-screen images on small screens */
 @media screen and (max-width: 359px) {
   .home__img {
     width: 100%;
