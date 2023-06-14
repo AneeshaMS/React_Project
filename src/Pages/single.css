@@ -13,7 +13,7 @@
 
 .l-main {
   overflow: hidden;
-  background: linear-gradient(#fffefe, #fefef1);
+  background: linear-gradient( to left,#fffefe,#fefcd6);
 }
 
 .bd-container {
@@ -101,17 +101,24 @@
   .home__img {
     width: 100%;
   }
+  .home__container {
+    padding: 5rem 0 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home__container {
+    padding: 3rem 0 0;
+  }
 }
 
 @media screen and (min-width: 576px) {
   .home__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-  }
-
-  .home__container {
     padding: 5rem 0 0;
   }
+
 
   .home__img {
     order: 1;
