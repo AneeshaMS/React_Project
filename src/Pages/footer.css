@@ -1,0 +1,72 @@
+.main{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    background-color: rgb(250, 249, 247);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100px;
+    background: #f8f5f5;
+    font-size: 20px;
+    margin: 10px;
+    line-height: 55px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150,150,150,.3);
+    transition: all .3s ease-out;
+}
+.icon:hover{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    cursor: pointer;
+}
+.icon:hover span{
+    font-size: 16px;
+}
+.icon:hover .fb-icon,.icon:hover .twi-icon,.icon:hover .ins-icon,.icon:hover .lin-icon,.icon:hover .yt-icon{
+    color: #fff;
+}
+.fb-icon{
+    color: #3b5998;
+}
+.fb:hover{
+    background: #3b5998;
+}
+
+.twi-icon{
+    color: #00acee;
+}
+.twi:hover{
+    background: #00acee;
+}
+
+.ins-icon{
+    color: #d62976;
+}
+.ins:hover{
+    background: #d62976;
+}
+
+.lin-icon{
+    color: #0A66C2;
+}
+.lin:hover{
+    background: #0A66C2;
+}
+
+.yt-icon{
+    color: #CD201F;
+}
+.yt:hover{
+    background: #CD201F;
+}

@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Preloader from './Pages/Preloader';
+import Products from './Pages/Products';
+import Single from './Pages/Single';
+
+
+import { useState } from 'react';
+
 
 function App() {
+  const [loading, setloading] = useState(true)
+  setTimeout(() => {
+    setloading(false)
+  }, 3000);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      {
+        loading ? <Preloader /> : (
+          <div>
+            <Single />
+            <Products />
+            <Footer />
+          </div>
+        )
+      }
+    </>
   );
 }
 

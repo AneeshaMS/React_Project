@@ -1,0 +1,166 @@
+/*========== CLASS CSS ==========*/
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.section-title,
+.section-title-center {
+  font-size: 1.75rem;
+  color: #161212;
+  text-align: center;
+  margin-bottom: 1.5rem
+}
+
+/*========== LAYOUT ==========*/
+.l-main {
+  overflow: hidden;
+  background: linear-gradient(#fffefe, #fefef1);
+}
+
+.bd-container {
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #FEFBFB;
+}
+
+
+
+
+/*========== HOME ==========*/
+.home__container {
+  row-gap: 1.5rem;
+  margin-bottom: 3em;
+  padding-bottom: 3rem;
+}
+
+.home__img {
+  width: 280px;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+
+}
+
+.home__img img {
+  max-width: 60%;
+  height: auto;
+  width: 100%;
+  mix-blend-mode: multiply;
+  filter: contrast(1);
+  transition: all 0.7s;
+}
+
+.home__img:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.home__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.home__description {
+  margin-bottom: 1.5rem;
+}
+
+/*========== BUTTONS ==========*/
+.button {
+  display: inline-block;
+  background: #2a2a72;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.button:hover {
+  border: 2px solid #2a2a72;
+  background: transparent;
+  color: #2a2a72;
+}
+
+
+
+/*========== MEDIA QUERIES ==========*/
+
+/* For full-screen images on small screens */
+@media screen and (max-width: 359px) {
+  .home__img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .home__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .home__container {
+    padding: 5rem 0 0;
+  }
+
+  .home__img {
+    order: 1;
+  }
+
+  .section-title-center {
+    text-align: initial;
+  }
+
+  .home__img {
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding-top: 7rem;
+  }
+
+
+  .home__container {
+    padding: 7rem 2rem 0;
+  }
+
+
+}
+
+@media screen and (min-width: 968px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__img {
+    width: 469px;
+  }
+
+  .home__container {
+    column-gap: 5rem;
+  }
+}
